@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo:700&display=swap');
+body{
+  background-color: #71c2f5;
+  padding: 0px;
+  margin: 0px;
+}
+#mainContainer{
+  display: grid;
+  grid-template-columns: 15vw 5vw 30vw 30vw 5vw 15vw;
+  grid-template-rows: 10vh 20vh 20vh 20vh 30vh 20vh 20vh 5vh 30vh;
+}
+#pokedexNumber{
+  display:flex;
+  font-size: 200%;
+  font-family: 'Oswald', sans-serif;
+  border: 5px solid black;
+  border-radius: 0px 10px 10px 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f195;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+/*#71c2f5*/
+#greninjaBG{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-column: 2/ span 4;
+  grid-row: 1/ span 7;
+}
+
+#greninjaText{
+  text-shadow: 11px 11px #144ca6;
+  z-index: -1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Heebo', sans-serif;
+  font-size: 40vh;
+  width:100%;
+  height:100%;
+  grid-column: 2/ span 4;
+  grid-row: 4;
+}
+
+#greninjaIntroText{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 130%;
+  border: 5px solid black;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #f5f195;
+  font-family: 'Oswald', sans-serif;
+  grid-row: 6/ span 2;
+  grid-column: 1/4;
+}
+#froakieIcon{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-column: 1;
+  grid-row: 5;
+}
+
+#froakieIcon:hover{
+
+}
+
+#ashGreninjaIcon{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-column: 6;
+  grid-row: 5;
+}
+#ashGreninjaIcon:hover{
+
+}
+
+.galleryImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-column: 2 / span 2;
+  grid-row: 9;
+  border: 5px solid #f5f195;
+  border-radius: 10px;
+}
