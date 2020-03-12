@@ -5,17 +5,23 @@ body{
   padding: 0px;
   margin: 0px;
 }
+#home{
+  position:fixed;
+  transform: scale(0.2);
+  left: 80vw;
+  bottom:42vw;
+}
 #mainContainer{
   display: grid;
-  grid-template-columns: 15vw 5vw 30vw 30vw 5vw 15vw;
-  grid-template-rows: 10vh 20vh 20vh 20vh 30vh 20vh 20vh 5vh 30vh;
+  grid-template-columns: 15vw 5vw 30vw 15vw 15vw 5vw 15vw;
+  grid-template-rows: 10vh 20vh 20vh 20vh 30vh 20vh 10vh 10vh 5vh 10vh 15vh 7.5vh 7.5vh 26vh 25vh 15vh 5vh 5vh 10vh;
 }
 #pokedexNumber{
   display:flex;
   font-size: 200%;
   font-family: 'Oswald', sans-serif;
-  border: 5px solid black;
-  border-radius: 0px 10px 10px 0px;
+  /*border: 5px solid black;
+  border-radius: 0px 10px 10px 0px;*/
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -23,6 +29,12 @@ body{
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 1;
+  transform: skewY(5deg);
+}
+
+#pokedexNumber > div{
+transform: skewY(-5deg);
+
 }
 /*#71c2f5*/
 #greninjaBG{
@@ -30,11 +42,44 @@ body{
   height: 100%;
   object-fit: cover;
   display: block;
-  grid-column: 2/ span 4;
+  grid-column: 2/ span 5;
   grid-row: 1/ span 7;
 }
+#ashgreninjaBG{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-column: 2/ span 5;
+  grid-row: 1/ span 7;
+  z-index: -2;
+}
+#froakieBG{
+  position:relative;
+  left:20vw;
+  top: 10vh;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  display:block;
+  grid-column: 1/ span 7;
+  grid-row: 1/ span 11;
+}
+#frogadierBG{
+  position:relative;
+  left:30vw;
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  display:block;
+  grid-column: 1/ span 7;
+  grid-row: 1/ span 11;
+  z-index: -2;
+}
+
 
 #greninjaText{
+  background-color: #f5f195;
   text-shadow: 11px 11px #144ca6;
   z-index: -1;
   display: flex;
@@ -42,58 +87,329 @@ body{
   justify-content: center;
   align-items: center;
   font-family: 'Heebo', sans-serif;
-  font-size: 40vh;
+  font-size:35vh;
   width:100%;
   height:100%;
-  grid-column: 2/ span 4;
+  grid-column: 1/ span 9;
   grid-row: 4;
+  transform: skewY(-13deg);
 }
 
-#greninjaIntroText{
+#ashgreninjaText{
+  background-color: #f5f195;
+  text-shadow: 11px 11px #144ca6;
+  z-index: -3;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 130%;
-  border: 5px solid black;
-  border-radius: 0px 10px 10px 0px;
+  font-family: 'Heebo', sans-serif;
+  font-size:24vh;
+  width:100%;
+  height:100%;
+  grid-column: 1/ span 9;
+  grid-row: 4;
+  transform: skewY(-13deg);
+}
+#froakieText{
+  background-color: #f5f195;
+  text-shadow: 11px 11px #144ca6;
+  z-index: -1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Heebo', sans-serif;
+  font-size:40vh;
+  width:100%;
+  height:100%;
+  grid-column: 1/ span 9;
+  grid-row: 4;
+  transform: skewY(-13deg);
+}
+
+#frogadierText{
+  background-color: #f5f195;
+  text-shadow: 11px 11px #144ca6;
+  z-index: -3;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Heebo', sans-serif;
+  font-size:33vh;
+  width:100%;
+  height:100%;
+  grid-column: 1/ span 9;
+  grid-row: 4;
+  transform: skewY(-13deg);
+}
+
+#greninjaText > div{
+transform: skewY(13deg);
+}
+#froakieText > div{
+  transform: skewY(13deg);
+}
+#frogadierText >div{
+  transform: skewY(13deg);
+}
+#ashgreninjaText > div{
+transform: skewY(13deg);
+}
+#greninjaIntroTextBox{
+  padding: 50px;
+  z-index: -2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 260%;
+  background-color: #f5f195;
+  font-family: 'Oswald', sans-serif;
+  grid-row: 7/ span 3;
+  grid-column: 1/9;
+  transform: skewY(10deg);
+}
+#froakieIntroTextBox{
+  padding: 50px;
+  z-index: -2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 260%;
   background-color: #f5f195;
   font-family: 'Oswald', sans-serif;
   grid-row: 6/ span 2;
-  grid-column: 1/4;
+  grid-column: 1/9;
+  transform: skewY(10deg);
 }
+#greninjaIntroText > div{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: #144ca6;
+}
+#froakieIntroText > div{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: #144ca6;
+}
+#greninjaIntroText > div:last-of-type{
+  display: inline;
+  background-color: black;
+}
+
 #froakieIcon{
-  width: 100%;
-  height: 100%;
+  padding-top: 35px;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
-  display: block;
-  grid-column: 1;
-  grid-row: 5;
+  display: flex;
+  align-self: center;
+  text-align: right;
+  grid-column: 4/span 3;
+  grid-row:15/span 2;
 }
 
 #froakieIcon:hover{
-
+  transform: scale(1.5);
 }
 
 #ashGreninjaIcon{
   width: 100%;
   height: 100%;
+  padding-top: 17px;
   object-fit: cover;
   display: block;
-  grid-column: 6;
-  grid-row: 5;
+  grid-column: 6/span 2;
+  grid-row: 15;
 }
 #ashGreninjaIcon:hover{
-
+  transform: scale(1.2);
 }
 
-.galleryImage{
+#frogadierIcon{
+  margin-bottom: 30px;
+  margin-left: 20px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  grid-column: 2 / span 2;
-  grid-row: 9;
-  border: 5px solid #f5f195;
-  border-radius: 10px;
+  grid-column: 4/ span2;
+  grid-row: 15;
+  transform:scale(.5)
+}
+#frogadierIcon:hover{
+ transform: scale(.6);
+}
+#galleryImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: 10px;
+  grid-column: 1 / span 3;
+  grid-row: 9 /span 5;
+  transform: rotate(-10deg);
+}
+#froakiegalleryImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: 10px;
+  grid-column: 1 / span 3;
+  grid-row: 8 /span 5;
+}
+
+#frogadiergalleryImage{
+  width: 100%;
+  height: 100%;
+  position:relative;
+  top: 20px;
+  object-fit: cover;
+  display: block;
+  margin-left: 10px;
+  grid-column: 1 / span 3;
+  grid-row: 7 /span 7;
+  z-index: -3;
+  transform: rotate(10deg);
+}
+
+#ashgalleryImage{
+  width: 68%;
+  height: 68%;
+  object-fit: cover;
+  display: block;
+  margin-left: 10px;
+  grid-column: 1 / span 3;
+  grid-row: 8 /span 10;
+  z-index: -3;
+}
+
+#greninjaTextBox2{
+  padding: 50px;
+  z-index: -2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 260%;
+  background-color: #f5f195;
+  font-family: 'Oswald', sans-serif;
+  grid-row: 14;
+  grid-column: 1/9;
+  transform: skewY(-5deg);
+}
+
+#froakieTextBox2{
+  padding: 50px;
+  z-index: -2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 260%;
+  background-color: #f5f195;
+  font-family: 'Oswald', sans-serif;
+  grid-row: 13 /span 2;
+  grid-column: 1/9;
+  transform: skewY(-5deg);
+}
+#greninjaText2 > div{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: purple;
+}
+
+#ashgreninjaText2 > div{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color:#144ca6 ;
+}
+#froakieText2 > div{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: green;
+}
+#froakieText2 > div:last-of-type{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: orange;
+}
+#frogadierText2 > div:first-of-type{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: #144ca6;
+}
+#frogadierText2 > div{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color: grey;
+}
+#frogadierText2 > div:last-of-type{
+  color: white;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 5px;
+  border: 1px solid #f5f195 ;
+  display: inline;
+  background-color:#144ca6 ;
+}
+
+#galleryImage2{
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-column: 1 / span 5;
+  grid-row: 15 /span 4;
+  transform: skewY(-5deg);
+}
+#bottombar{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 400%;
+  background-color: #f5f195;
+  font-family: 'Oswald', sans-serif;
+    grid-row: 18 /span 2;
+    grid-column: 1/span 8;
+    background-color: #f5f195;
+    transform: skewY(-5deg);
 }
