@@ -413,3 +413,21 @@ transform: skewY(13deg);
     background-color: #f5f195;
     transform: skewY(-5deg);
 }
+
+#ashgreninjaVideo{
+  text-align: center;
+  align-self: center;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 10px;
+  background-color: #144ca6 ;
+  font-size: 300%;
+  right: 15vw;
+  grid-column: 4/span 2;
+  grid-row: 11;
+}
+#ashgreninjaVideo:hover{
+  background-color: #144cca ;
+}
