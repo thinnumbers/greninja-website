@@ -5,12 +5,7 @@ body{
   padding: 0px;
   margin: 0px;
 }
-#home{
-  position:fixed;
-  transform: scale(0.2);
-  left: 80vw;
-  bottom:42vw;
-}
+
 #mainContainer{
   display: grid;
   grid-template-columns: 15vw 5vw 30vw 15vw 15vw 5vw 15vw;
